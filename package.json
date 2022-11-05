@@ -1,0 +1,11 @@
+{
+  "name": "sever-design-system",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
