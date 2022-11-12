@@ -2,12 +2,7 @@
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "composite": true,
-    "outDir": "dist",
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["components/*"]
-    }
+    "outDir": "dist"
   },
   "exclude": [
     "node_modules"
