@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -26,13 +26,13 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+const Button: FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}) => {
   return (
     <button
       type="button"
@@ -43,3 +43,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;
