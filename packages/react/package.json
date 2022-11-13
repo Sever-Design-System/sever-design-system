@@ -1,7 +1,7 @@
 {
   "name": "@sever-ui/react",
   "version": "0.0.3",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
   "private": false,
   "scripts": {
@@ -36,5 +36,6 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "files": ["dist"]
 }
