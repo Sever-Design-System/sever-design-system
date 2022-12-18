@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
   "private": true,
+  "scripts": {
+    "prepare": "husky install"
+  },
   "workspaces": [
     "packages/*"
   ],
