@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component testing Button props 1`] = `
+<button
+  type="button"
+>
+  Some button text
+</button>
+`;
