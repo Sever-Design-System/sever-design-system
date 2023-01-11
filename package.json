@@ -1,0 +1,16 @@
+{
+  "name": "sever-design-system",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.0.3"
+  }
+}
