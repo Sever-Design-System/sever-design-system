@@ -3,7 +3,6 @@
   "version": "0.0.3",
   "main": "./dist/index.js",
   "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
-  "private": false,
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
