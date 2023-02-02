@@ -133,3 +133,6 @@ dist
 # ide
 .idea
 .vscode
+
+# storybook
+storybook-static/
