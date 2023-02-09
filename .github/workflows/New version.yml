@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 jobs:
-  Call CI workflow:
+  Call-CI-workflow:
     uses: ./.github/workflows/CI.yml
+  Say-OK:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "OK"
 
