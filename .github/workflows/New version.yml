@@ -6,5 +6,5 @@ on:
       - 'v*'
 jobs:
   Call CI workflow:
-    uses: ./.github/workflows/Ci.yml
+    uses: ./.github/workflows/CI.yml
 
