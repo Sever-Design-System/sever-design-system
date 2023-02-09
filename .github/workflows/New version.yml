@@ -7,8 +7,19 @@ on:
 jobs:
   Call-CI-workflow:
     uses: ./.github/workflows/CI.yml
-  Say-OK:
+  Publish-version:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
     steps:
-      - run: echo "OK"
+      - uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node modules
+        run: yarn install --immutable
+      - name: Publish package
+        run: lerna publish from-git
 
