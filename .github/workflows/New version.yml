@@ -1,0 +1,10 @@
+name: New version
+run-name: CI
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  Call CI workflow:
+    uses: ./.github/workflows/Ci.yml
+
