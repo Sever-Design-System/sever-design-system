@@ -7,8 +7,8 @@ on:
 #    tags:
 #      - 'v*'
 jobs:
-  Call-CI-workflow:
-    uses: ./.github/workflows/CI.yml
+#  Call-CI-workflow:
+#    uses: ./.github/workflows/CI.yml
   Publish-version:
     runs-on: ubuntu-latest
     strategy:
