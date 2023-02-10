@@ -31,4 +31,4 @@ jobs:
       - name: Stash changes
         run: git stash
       - name: Publish package
-        run: lerna publish from-git
+        run: lerna publish from-git --yes
