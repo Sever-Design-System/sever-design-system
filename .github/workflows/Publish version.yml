@@ -1,5 +1,5 @@
 name: Publish version
-run-name: CI
+run-name: Publish Version
 on:
 #  pull_request:
 #    branches: [ master ]
