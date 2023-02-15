@@ -1,11 +1,11 @@
 name: Publish version
 run-name: Publish Version
 on:
-#  pull_request:
-#    branches: [ master ]
-  push:
-    tags:
-      - 'v*'
+  pull_request:
+    branches: [ master ]
+#  push:
+#    tags:
+#      - 'v*'
 jobs:
 #  Call-CI-workflow:
 #    uses: ./.github/workflows/CI.yml
@@ -19,7 +19,7 @@ jobs:
       - name: Configure npm access
         run: |
           cat >.npmrc <<END
-          //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+          //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
           END
         env:
           $NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
