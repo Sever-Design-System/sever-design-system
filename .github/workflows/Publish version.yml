@@ -16,6 +16,8 @@ jobs:
         node-version: [ 18.x ]
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: 'план-репозитория'
 #      - name: Configure npm access
 #        run: |
 #          cat >.npmrc <<END
