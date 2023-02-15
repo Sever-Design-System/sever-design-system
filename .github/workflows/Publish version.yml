@@ -16,18 +16,10 @@ jobs:
         node-version: [ 18.x ]
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: 'план-репозитория'
-#      - name: Configure npm access
-#        run: |
-#          cat >.npmrc <<END
-#          //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
-#          END
-#        env:
-#          $NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
-      - name: checkout branch
-        run: git checkout план-репозитория
+#        with:
+#          ref: 'план-репозитория'
+      - name: Fetch tags
+        run: git fetch --tags
 
       - name: Create npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> .npmrc
