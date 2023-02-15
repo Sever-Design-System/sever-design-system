@@ -1,6 +1,6 @@
 {
   "name": "@sever-ui/react",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "./dist/index.js",
   "repository": "https://github.com/Sever-Design-System/sever-design-system.git",
   "scripts": {
