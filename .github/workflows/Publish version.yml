@@ -35,4 +35,4 @@ jobs:
       - name: Stash changes
         run: git restore yarn.lock
       - name: Publish package
-        run: lerna publish from-git --yes --force-publish
+        run: lerna publish from-git --yes --force-publish --include-private "*"
