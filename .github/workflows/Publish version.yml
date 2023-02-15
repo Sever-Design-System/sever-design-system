@@ -1,11 +1,11 @@
-name: New version
+name: Publish version
 run-name: CI
 on:
-  pull_request:
-    branches: [ master ]
-#  push:
-#    tags:
-#      - 'v*'
+#  pull_request:
+#    branches: [ master ]
+  push:
+    tags:
+      - 'v*'
 jobs:
 #  Call-CI-workflow:
 #    uses: ./.github/workflows/CI.yml
@@ -32,11 +32,5 @@ jobs:
         run: yarn install --immutable
       - name: Stash changes
         run: git stash
-
-      - name: Debug npmrc content
-        run: cat .npmrc
-      - name: Debut npmrc path
-        run: realpath .npmrc
-
       - name: Publish package
         run: lerna publish from-git --yes
