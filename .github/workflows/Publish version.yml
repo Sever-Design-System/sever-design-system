@@ -34,5 +34,9 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
       - name: Stash changes
         run: git restore yarn.lock
+
+      - name: build
+        run: lerna run build
+
       - name: Publish package
-        run: lerna publish from-git --yes --force-publish --include-private "*"
+        run: lerna publish from-git --yes --force-publish
