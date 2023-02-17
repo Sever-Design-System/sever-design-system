@@ -21,7 +21,8 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "lerna": "^6.0.3",
-    "lerna-changelog": "^2.2.0"
+    "lerna-changelog": "^2.2.0",
+    "prettier": "2.8.4"
   },
   "husky": {
     "hooks": {
