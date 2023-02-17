@@ -2,14 +2,14 @@ name: CI
 run-name: CI
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
   workflow_call:
 jobs:
   CI:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js ${{ matrix.node-version }}
