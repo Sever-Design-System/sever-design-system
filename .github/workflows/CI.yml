@@ -1,0 +1,26 @@
+name: CI
+run-name: CI
+on:
+  pull_request:
+    branches: [master]
+  workflow_call:
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node modules
+        run: yarn install --immutable
+      - name: Lint files
+        run: lerna run lint:eslint
+      - name: Run tests
+        run: lerna run test
+      - name: Build storybook
+        run: lerna run build:storybook

@@ -1,0 +1,34 @@
+name: Publish version
+run-name: Publish Version
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  CI:
+    uses: ./.github/workflows/CI.yml
+  Publish-version:
+    needs: CI
+    name: Publish new library version
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch tags
+        run: git fetch --all
+      - name: Create npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> .npmrc
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node modules
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Stash changes
+        run: git restore yarn.lock
+      - name: build
+        run: lerna run build
+      - name: Publish package
+        run: lerna publish from-package --yes --force-publish

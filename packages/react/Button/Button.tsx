@@ -10,15 +10,9 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-const Button: FC<ButtonProps> = ({
-  label,
-  ...props
-}) => {
+const Button: FC<ButtonProps> = ({ label, ...props }) => {
   return (
-    <button
-      type="button"
-      {...props}
-    >
+    <button type="button" {...props}>
       {label}
     </button>
   );
