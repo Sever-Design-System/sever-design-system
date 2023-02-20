@@ -1,4 +1,4 @@
-# sever-design-system
+# uplane-ui design system
 
 ## Set up development
 
