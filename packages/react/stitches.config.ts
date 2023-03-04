@@ -1,4 +1,6 @@
 import { createStitches } from '@stitches/react';
+import { colors } from '../../tokens/colors';
+
 
 export const {
   styled,
@@ -12,26 +14,26 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      primary100: '#F2F0FF',
-      primary200: '#3A1EF0',
-      primary300: '#260DC6',
-      primary400: '#170491',
-      success100: '#ECFAF2',
-      success200: '#008F33',
-      success300: '#007120',
-      success400: '#005012',
-      info100: '#ECF7FF',
-      info200: '#066CBC',
-      info300: '#00519B',
-      info400: '#003A75',
-      warning100: '#FFF6EC',
-      warning200: '#D96200',
-      warning300: '#B24900',
-      warning400: '#823200',
-      danger100: '#FFECED',
-      danger200: '#DA0002',
-      danger300: '#B30000',
-      danger400: '#830000'
+      primary100: colors.indigo[50],
+      primary200: colors.indigo[500],
+      primary300: colors.indigo[600],
+      primary400: colors.indigo[700],
+      success100: colors.green[50],
+      success200: colors.green[500],
+      success300: colors.green[600],
+      success400: colors.green[700],
+      info100: colors.cyan[50],
+      info200: colors.cyan[500],
+      info300: colors.cyan[600],
+      info400: colors.cyan[700],
+      warning100: colors.orange[50],
+      warning200: colors.orange[500],
+      warning300: colors.orange[600],
+      warning400: colors.orange[700],
+      danger100: colors.red[50],
+      danger200: colors.red[500],
+      danger300: colors.red[600],
+      danger400: colors.red[700]
     },
     space: {},
     fontSizes: {},
