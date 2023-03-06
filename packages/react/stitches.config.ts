@@ -1,7 +1,7 @@
 import { createStitches } from '@stitches/react';
 import { colors } from '../../tokens/colors';
 import { typography } from '../../tokens/typography';
-import { spacing } from "../../tokens/spacing";
+import { spacing } from '../../tokens/spacing';
 
 export const {
   styled,
@@ -37,7 +37,7 @@ export const {
       danger400: colors.red[700],
     },
     space: {
-      ...spacing
+      ...spacing,
     },
     fontSizes: {
       hero: typography.size[56],
