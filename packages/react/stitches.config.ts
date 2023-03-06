@@ -1,5 +1,6 @@
 import { createStitches } from '@stitches/react';
 import { colors } from '../../tokens/colors';
+import { typography } from '../../tokens/typography'
 
 
 export const {
@@ -36,7 +37,15 @@ export const {
       danger400: colors.red[700]
     },
     space: {},
-    fontSizes: {},
+    fontSizes: {
+      hero: typography.size[56],
+      h1: typography.size[40],
+      h2: typography.size[32],
+      h3: typography.size[24],
+      h4: typography.size[20],
+      h5: typography.size[18],
+      h6: typography.size[16],
+    },
     fonts: {},
     fontWeights: {},
     lineHeights: {},
