@@ -1,7 +1,6 @@
 import { createStitches } from '@stitches/react';
 import { colors } from '../../tokens/colors';
-import { typography } from '../../tokens/typography'
-
+import { typography } from '../../tokens/typography';
 
 export const {
   styled,
@@ -34,7 +33,7 @@ export const {
       danger100: colors.red[50],
       danger200: colors.red[500],
       danger300: colors.red[600],
-      danger400: colors.red[700]
+      danger400: colors.red[700],
     },
     space: {},
     fontSizes: {
@@ -45,6 +44,12 @@ export const {
       h4: typography.size[20],
       h5: typography.size[18],
       h6: typography.size[16],
+      large: typography.size[18],
+      base: typography.size[16],
+      small: typography.size[14],
+      subLabel: typography.size[12],
+      support: typography.size[12],
+      monospace: typography.size[14],
     },
     fonts: {},
     fontWeights: {},
