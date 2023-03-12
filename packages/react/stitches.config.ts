@@ -83,6 +83,14 @@ export const {
       bold: typography.fontWeight.bold,
     },
     lineHeights: {
+      hero: typography.lineHeight[72],
+      h1: typography.lineHeight[48],
+      h2: typography.lineHeight[40],
+      h3: typography.lineHeight[32],
+      h4: typography.lineHeight[24],
+      h5: typography.lineHeight[24],
+      h6: typography.lineHeight[24],
+
       large: typography.lineHeight[24],
       base: typography.lineHeight[24],
       small: typography.lineHeight[20],
