@@ -19,22 +19,40 @@ export const {
       primary200: colors.indigo[500],
       primary300: colors.indigo[600],
       primary400: colors.indigo[700],
+
       success100: colors.green[50],
       success200: colors.green[500],
       success300: colors.green[600],
       success400: colors.green[700],
+
       info100: colors.cyan[50],
       info200: colors.cyan[500],
       info300: colors.cyan[600],
       info400: colors.cyan[700],
+
       warning100: colors.orange[50],
       warning200: colors.orange[500],
       warning300: colors.orange[600],
       warning400: colors.orange[700],
+
       danger100: colors.red[50],
       danger200: colors.red[500],
       danger300: colors.red[600],
       danger400: colors.red[700],
+
+      neutral25: colors.white,
+      neutral50: colors.greyBlue[50],
+      neutral100: colors.greyBlue[100],
+      neutral200: colors.greyBlue[200],
+      neutral300: colors.greyBlue[500],
+      neutral400: colors.greyBlue[700],
+
+      neutralA25: '#ffffff1a',
+      neutralA50: '#6869a80d',
+      neutralA100: '#51518c1a',
+      neutralA200: '#7a71864d',
+      neutralA300: '#29203c9c',
+      neutralA400: '#0b0719cc'
     },
     space: {
       ...spacing,
