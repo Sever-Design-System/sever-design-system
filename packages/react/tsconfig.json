@@ -4,6 +4,6 @@
     "composite": true,
     "outDir": "./dist/"
   },
-  "include": ["."],
+  "include": [".", "../../tokens/*"],
   "exclude": ["node_modules"]
 }

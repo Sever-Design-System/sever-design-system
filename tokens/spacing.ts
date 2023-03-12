@@ -3,7 +3,7 @@ export const spacing = {
   1: '1px',
   2: '2px',
   4: '0.25rem',
-  7: '0.4375rem',
+  6: '0.4375rem',
   8: '0.5rem',
   12: '0.75rem',
   16: '1rem',
