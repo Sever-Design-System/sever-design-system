@@ -1,10 +1,15 @@
-import { FC } from 'react';
+import {FC, ReactNode} from 'react';
 
-export interface ButtonProps {
-  /**
-   * Button contents
-   */
+type size = 'small' | 'medium'| 'large' | 'extraLarge';
+type type = 'primary' | 'secondary' | 'tertiary';
+export interface ButtonProps{
+  size: size;
+  type: type;
+  disabled?: boolean;
+  isLoading?: boolean;
   label: string;
+  iconLeft?: ReactNode
+  iconRight?: ReactNode
 }
 
 /**
