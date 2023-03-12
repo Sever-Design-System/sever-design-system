@@ -55,17 +55,17 @@ export const {
       neutralA400: '#0b0719cc'
     },
     space: {
-      xs4: spacing[2],
-      xs3: spacing[4],
-      xs2: spacing[6],
+      '4xs': spacing[2],
+      '3xs': spacing[4],
+      '2xs': spacing[6],
       xs: spacing[8],
       s: spacing[12],
       m: spacing[16],
       l: spacing[20],
       xl: spacing[24],
-      xl2: spacing[32],
-      xl3: spacing[40],
-      xl4: spacing[48],
+      '2xl': spacing[32],
+      '3xl': spacing[40],
+      '4xl': spacing[48],
     },
     fontSizes: {
       hero: typography.size[56],
