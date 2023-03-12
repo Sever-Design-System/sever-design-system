@@ -66,7 +66,7 @@ export const {
       h5: typography.size[18],
       h6: typography.size[16],
       large: typography.size[18],
-      base: typography.size[16],
+      medium: typography.size[16],
       small: typography.size[14],
       subLabel: typography.size[12],
       support: typography.size[12],
@@ -92,7 +92,7 @@ export const {
       h6: typography.lineHeight[24],
 
       large: typography.lineHeight[24],
-      base: typography.lineHeight[24],
+      medium: typography.lineHeight[24],
       small: typography.lineHeight[20],
       subLabel: typography.lineHeight[16],
       support: typography.lineHeight[16],
