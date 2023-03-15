@@ -1,17 +1,17 @@
-import {ButtonHTMLAttributes, FC, ReactNode} from 'react';
-import {styled} from '../stitches.config';
+import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import { styled } from '../stitches.config';
 
-type size = 'small' | 'medium'| 'large' | 'extraLarge';
+type size = 'small' | 'medium' | 'large' | 'extraLarge';
 type appearance = 'primary' | 'secondary' | 'tertiary';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>  {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: size;
   appearance: appearance;
   disabled?: boolean;
   isLoading?: boolean;
   label: string;
-  iconLeft?: ReactNode
-  iconRight?: ReactNode
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 }
 
 /**
@@ -19,36 +19,41 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>  {
  */
 
 const StyledButton = styled('button', {
+  display: 'inline-flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  whiteSpace: 'nowrap',
   borderRadius: '8px',
   cursor: 'pointer',
   fontSize: '$small',
   lineHeight: '$small',
   border: 0,
+  padding: 0,
 
   variants: {
     size: {
       small: {
-        padding: '0 $xs2'
+        paddingInline: '$xs2',
+        height: '$l',
       },
       medium: {
-        padding: '$xs2 $s'
+        paddingInline: '$s',
+        height: '$xl2',
       },
       large: {
-        padding: '$xs $l',
+        paddingInline: '$l',
+        height: '$xl3',
       },
       extraLarge: {
-        padding: '$s $xl',
-      }
-    }
-  }
+        paddingInline: '$xl',
+        height: '$xl4',
+      },
+    },
+  },
 });
 
 const Button: FC<ButtonProps> = ({ label, ...props }) => {
-  return (
-    <StyledButton {...props}>
-      {label}
-    </StyledButton>
-  );
+  return <StyledButton {...props}>{label}</StyledButton>;
 };
 
 export default Button;
