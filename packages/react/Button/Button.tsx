@@ -62,6 +62,9 @@ const StyledButton = styled('button', {
         '&:active': {
           backgroundColor: '$primary400',
         },
+        '&:focus': {
+          boxShadow: '0px 0px 0px 2px rgba(192, 206, 255, 0.6)',
+        },
       },
       secondary: {
         backgroundColor: '$neutralA25',
@@ -77,6 +80,9 @@ const StyledButton = styled('button', {
           backgroundColor: '$neutralA100',
           color: '$primary400',
         },
+        '&:focus': {
+          boxShadow: '0px 0px 0px 2px rgba(192, 206, 255, 0.6)',
+        },
       },
       tertiary: {
         backgroundColor: '$neutralA25',
@@ -90,6 +96,9 @@ const StyledButton = styled('button', {
         '&:active': {
           backgroundColor: '$neutralA100',
           color: '$primary400',
+        },
+        '&:focus': {
+          boxShadow: '0px 0px 0px 2px rgba(192, 206, 255, 0.6)',
         },
       },
     },
