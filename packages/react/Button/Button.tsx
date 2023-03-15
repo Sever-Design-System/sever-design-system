@@ -54,15 +54,32 @@ const StyledButton = styled('button', {
       primary: {
         backgroundColor: '$primary200',
         color: '$neutral25',
+
+        '&:hover': {
+          cursor: 'pointer',
+          backgroundColor: '$primary300',
+        },
       },
       secondary: {
         backgroundColor: '$neutralA25',
         color: '$neutral500',
         border: '1px solid $neutral200',
+
+        '&:hover': {
+          cursor: 'pointer',
+          backgroundColor: '$neutralA50',
+          color: '$primary300',
+        },
       },
       tertiary: {
         backgroundColor: '$neutralA25',
         color: '$neutral500',
+
+        '&:hover': {
+          cursor: 'pointer',
+          backgroundColor: '$neutralA50',
+          color: '$primary300',
+        },
       },
     },
     disabled: {
