@@ -65,6 +65,12 @@ const StyledButton = styled('button', {
         color: '$neutral500',
       },
     },
+    disabled: {
+      true: {
+        backgroundColor: '$neutral100',
+        color: '$neutral300',
+      },
+    },
   },
 });
 
