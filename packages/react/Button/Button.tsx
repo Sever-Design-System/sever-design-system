@@ -59,6 +59,9 @@ const StyledButton = styled('button', {
           cursor: 'pointer',
           backgroundColor: '$primary300',
         },
+        '&:active': {
+          backgroundColor: '$primary400',
+        },
       },
       secondary: {
         backgroundColor: '$neutralA25',
@@ -70,6 +73,10 @@ const StyledButton = styled('button', {
           backgroundColor: '$neutralA50',
           color: '$primary300',
         },
+        '&:active': {
+          backgroundColor: '$neutralA100',
+          color: '$primary400',
+        },
       },
       tertiary: {
         backgroundColor: '$neutralA25',
@@ -79,6 +86,10 @@ const StyledButton = styled('button', {
           cursor: 'pointer',
           backgroundColor: '$neutralA50',
           color: '$primary300',
+        },
+        '&:active': {
+          backgroundColor: '$neutralA100',
+          color: '$primary400',
         },
       },
     },
