@@ -22,13 +22,14 @@ const StyledButton = styled('button', {
   display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
-  whiteSpace: 'nowrap',
   borderRadius: '8px',
-  cursor: 'pointer',
-  fontSize: '$small',
-  lineHeight: '$small',
   border: 0,
   padding: 0,
+  whiteSpace: 'nowrap',
+  fontSize: '$small',
+  fontWeight: '$medium',
+  lineHeight: '$small',
+  cursor: 'pointer',
 
   variants: {
     size: {
@@ -47,6 +48,21 @@ const StyledButton = styled('button', {
       extraLarge: {
         paddingInline: '$xl',
         height: '$xl4',
+      },
+    },
+    appearance: {
+      primary: {
+        backgroundColor: '$primary200',
+        color: '$neutral25',
+      },
+      secondary: {
+        backgroundColor: '$neutralA25',
+        color: '$neutral500',
+        border: '1px solid $neutral200',
+      },
+      tertiary: {
+        backgroundColor: '$neutralA25',
+        color: '$neutral500',
       },
     },
   },
