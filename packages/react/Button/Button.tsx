@@ -10,8 +10,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   isLoading?: boolean;
   label: string;
-  iconLeft?: ReactNode;
-  iconRight?: ReactNode;
+  IconLeft?: ReactNode;
+  IconRight?: ReactNode;
 }
 
 /**
@@ -111,8 +111,39 @@ const StyledButton = styled('button', {
   },
 });
 
-const Button: FC<ButtonProps> = ({ label, ...props }) => {
-  return <StyledButton {...props}>{label}</StyledButton>;
+const IconWrapper = styled('span', {
+  display: 'inline-flex',
+  alignSelf: 'center',
+
+  variants: {
+    left: {
+      true: {
+        marginInlineEnd: '$xs',
+      },
+    },
+    right: {
+      true: {
+        marginInlineStart: '$xs',
+      },
+    },
+  },
+});
+
+const Button: FC<ButtonProps> = ({
+  label = '',
+  IconLeft = undefined,
+  IconRight = undefined,
+  ...props
+}) => {
+  return (
+    <StyledButton {...props}>
+      <>
+        {IconLeft && <IconWrapper left>{IconLeft}</IconWrapper>}
+        {label}
+        {IconRight && <IconWrapper right>{IconRight}</IconWrapper>}
+      </>
+    </StyledButton>
+  );
 };
 
 export default Button;
