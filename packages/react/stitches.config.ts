@@ -55,6 +55,8 @@ export const {
       neutralA300: colors.greyBlueAlpha[300],
       neutralA400: colors.greyBlueAlpha[500],
       neutralA500: colors.greyBlueAlpha[700],
+
+      focus: colors.focus
     },
     space: {
       xs4: spacing[2],
