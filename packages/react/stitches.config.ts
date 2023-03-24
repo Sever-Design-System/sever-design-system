@@ -44,8 +44,9 @@ export const {
       neutral50: colors.greyBlue[50],
       neutral100: colors.greyBlue[100],
       neutral200: colors.greyBlue[200],
-      neutral300: colors.greyBlue[500],
-      neutral400: colors.greyBlue[700],
+      neutral300: colors.greyBlue[300],
+      neutral400: colors.greyBlue[500],
+      neutral500: colors.greyBlue[700],
 
       neutralA25: '#ffffff1a',
       neutralA50: '#6869a80d',
