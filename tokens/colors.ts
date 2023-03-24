@@ -195,6 +195,7 @@ export const colors = {
   },
 
   white: '#FFFFFF',
+  whiteAlpha: 'hsla(0,0%,100%,0.1)',
 
   black: '#020103',
 };
