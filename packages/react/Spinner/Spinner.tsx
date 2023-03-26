@@ -24,8 +24,8 @@ const StyledSpinner = styled('div', {
     size: {
       small: {
         borderWidth: '2px',
-        width: '12px',
-        height: '12px',
+        width: '14px',
+        height: '14px',
       },
       medium: {
         borderWidth: '4px',
