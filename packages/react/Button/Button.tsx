@@ -1,10 +1,11 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { styled } from '../stitches.config';
+import { Spinner, spinnerSize } from '../Spinner';
 
 type size = 'small' | 'medium' | 'large' | 'extraLarge';
 type appearance = 'primary' | 'secondary' | 'tertiary';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: size;
   appearance: appearance;
   disabled?: boolean;
@@ -136,19 +137,33 @@ const IconWrapper = styled('span', {
   },
 });
 
-const Button: FC<ButtonProps> = ({
+const Button: FC<IButtonProps> = ({
   label = '',
   IconLeft = undefined,
   IconRight = undefined,
+  isLoading = false,
   ...props
 }) => {
+  let isSpinnerInverted = false;
+  if (props.appearance === 'primary') {
+    isSpinnerInverted = true;
+  }
+  let spinnerSize: spinnerSize = 'small';
+  if (props.size === 'large' || props.size === 'extraLarge') {
+    spinnerSize = 'medium';
+  }
+
   return (
     <StyledButton {...props}>
-      <>
-        {IconLeft && <IconWrapper left>{IconLeft}</IconWrapper>}
-        {label}
-        {IconRight && <IconWrapper right>{IconRight}</IconWrapper>}
-      </>
+      {isLoading ? (
+        <Spinner inverted={isSpinnerInverted} size={spinnerSize} />
+      ) : (
+        <>
+          {IconLeft && <IconWrapper left>{IconLeft}</IconWrapper>}
+          {label}
+          {IconRight && <IconWrapper right>{IconRight}</IconWrapper>}
+        </>
+      )}
     </StyledButton>
   );
 };

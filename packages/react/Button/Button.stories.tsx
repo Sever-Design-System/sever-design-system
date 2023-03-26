@@ -37,3 +37,11 @@ WithRightIcon.args = {
   appearance: 'primary',
   IconLeft: PlusIcon(),
 };
+
+export const Loading = Template.bind({});
+WithRightIcon.args = {
+  label: 'Button',
+  size: 'medium',
+  appearance: 'primary',
+  isLoading: true,
+};

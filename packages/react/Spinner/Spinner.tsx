@@ -1,8 +1,10 @@
 import { keyframes, styled } from '../stitches.config';
 import { FC } from 'react';
 
+export type spinnerSize = 'small' | 'medium' | 'large';
+
 export interface ISpinnerProps {
-  size?: 'small' | 'medium' | 'large';
+  size?: spinnerSize;
   inverted?: boolean;
 }
 

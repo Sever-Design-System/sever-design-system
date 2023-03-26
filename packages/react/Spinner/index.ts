@@ -1,1 +1,1 @@
-export { Spinner } from './Spinner';
+export { Spinner, spinnerSize } from './Spinner';
