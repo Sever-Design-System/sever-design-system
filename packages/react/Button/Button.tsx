@@ -106,6 +106,13 @@ const StyledButton = styled('button', {
       true: {
         backgroundColor: '$neutral100',
         color: '$neutral300',
+        cursor: 'not-allowed',
+
+        '&:hover': {
+          backgroundColor: '$neutral100',
+          color: '$neutral300',
+          cursor: 'not-allowed',
+        },
       },
     },
   },
