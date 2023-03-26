@@ -2,8 +2,8 @@
 
 exports[`Button component testing Button props 1`] = `
 <button
-  type="button"
+  className="c-fEVIFd c-fEVIFd-gwqHNH-size-medium c-fEVIFd-ixhqCZ-appearance-primary"
 >
-  Some button text
+  Button
 </button>
 `;
