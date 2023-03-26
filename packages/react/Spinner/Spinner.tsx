@@ -11,25 +11,40 @@ const rotation = keyframes({
   '100%': { transform: 'rotate(360deg)' },
 });
 
-const StyledSpinner = styled('span', {
+const StyledSpinner = styled('div', {
+  borderRadius: '50%',
+  display: 'inline-block',
+  boxSizing: 'border-box',
+  animation: `${rotation} 1s linear infinite`,
+  borderStyle: 'solid',
+
   variants: {
     size: {
-      small: {},
+      small: {
+        borderWidth: '2px',
+        width: '12px',
+        height: '12px',
+      },
       medium: {
+        borderWidth: '4px',
         width: '32px',
         height: '32px',
-        border: '4px solid #FFF',
-        borderBottomColor: 'transparent',
-        borderRadius: '50%',
-        display: 'inline-block',
-        boxSizing: 'border-box',
-        animation: `${rotation} 1s linear infinite`,
       },
-      large: {},
+      large: {
+        borderWidth: '4px',
+        width: '56px',
+        height: '56px',
+      },
     },
     inverted: {
-      true: {},
-      false: {},
+      true: {
+        borderColor: '$neutral25',
+        borderBottomColor: 'transparent',
+      },
+      false: {
+        borderColor: '$neutral500',
+        borderBottomColor: 'transparent',
+      },
     },
   },
 });
