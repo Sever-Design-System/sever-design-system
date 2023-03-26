@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { styled } from '../stitches.config';
+import { IconWrapper } from './IcconWrapper';
 import { Spinner, spinnerSize } from '../Spinner';
 
 type size = 'small' | 'medium' | 'large' | 'extraLarge';
@@ -119,25 +120,7 @@ const StyledButton = styled('button', {
   },
 });
 
-const IconWrapper = styled('span', {
-  display: 'inline-flex',
-  alignSelf: 'center',
-
-  variants: {
-    left: {
-      true: {
-        marginInlineEnd: '$xs',
-      },
-    },
-    right: {
-      true: {
-        marginInlineStart: '$xs',
-      },
-    },
-  },
-});
-
-const Button: FC<IButtonProps> = ({
+export const Button: FC<IButtonProps> = ({
   label = '',
   IconLeft = undefined,
   IconRight = undefined,
@@ -167,5 +150,3 @@ const Button: FC<IButtonProps> = ({
     </StyledButton>
   );
 };
-
-export default Button;
