@@ -44,16 +44,19 @@ export const {
       neutral50: colors.greyBlue[50],
       neutral100: colors.greyBlue[100],
       neutral200: colors.greyBlue[200],
-      neutral300: colors.greyBlue[500],
-      neutral400: colors.greyBlue[600],
+      neutral300: colors.greyBlue[300],
+      neutral400: colors.greyBlue[500],
       neutral500: colors.greyBlue[700],
 
-      neutralA25: '#ffffff1a',
-      neutralA50: '#6869a80d',
-      neutralA100: '#51518c1a',
-      neutralA200: '#7a71864d',
-      neutralA300: '#29203c9c',
-      neutralA400: '#0b0719cc',
+      neutralA25: colors.whiteAlpha,
+      neutralA50: colors.greyBlueAlpha[50],
+      neutralA100: colors.greyBlueAlpha[100],
+      neutralA200: colors.greyBlueAlpha[200],
+      neutralA300: colors.greyBlueAlpha[300],
+      neutralA400: colors.greyBlueAlpha[500],
+      neutralA500: colors.greyBlueAlpha[700],
+
+      focus: colors.focus
     },
     space: {
       xs4: spacing[2],
