@@ -13,5 +13,11 @@ export const Flex = Template.bind({});
 Flex.args = {
   children: 'Flex container with centered items',
   display: 'flex',
-  backgroundColor: 'red',
+  backgroundColor: 'cyan',
+  width: 400,
+  height: 300,
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
 };
