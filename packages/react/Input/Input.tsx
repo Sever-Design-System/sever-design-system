@@ -14,6 +14,16 @@ export interface IInputProps {
 }
 
 const StyledInput = styled('input', {
+  borderRadius: '$s',
+  border: '1px solid $neutral200',
+  padding: '$xs4 $xs2',
+  height: '$xl2',
+  color: '$neutral500',
+
+  '&::placeholder': {
+    color: '$neutral400',
+  },
+
   variants: {
     size: {
       small: {},
@@ -31,5 +41,5 @@ const StyledInput = styled('input', {
 });
 
 export const Input: FC<IInputProps> = () => {
-  return <StyledInput />;
+  return <StyledInput placeholder="Super Input" />;
 };
