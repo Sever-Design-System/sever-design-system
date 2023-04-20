@@ -21,3 +21,15 @@ ReadOnly.args = {
   value: 'Readonly Input',
   readonly: true,
 };
+export const Valid = Template.bind({});
+Valid.args = {
+  value: 'Valid Input',
+  valid: true,
+  helpMessage: 'Not bad',
+};
+export const Invalid = Template.bind({});
+Invalid.args = {
+  value: 'Invalid Input',
+  invalid: true,
+  helpMessage: 'Not bad',
+};

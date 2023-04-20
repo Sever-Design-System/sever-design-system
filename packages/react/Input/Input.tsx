@@ -8,6 +8,7 @@ export interface IInputProps {
   disabled?: boolean;
   readonly?: boolean;
   valid?: boolean;
+  invalid?: boolean;
   helpMessage?: string;
   label?: string;
   ghost?: boolean;
@@ -57,13 +58,50 @@ const StyledInput = styled('input', {
         color: '$neutral400',
       },
     },
+    valid: {
+      true: {
+        borderColor: '$success200',
+      },
+    },
+    invalid: {
+      true: {
+        borderColor: '$danger200',
+      },
+    },
+  },
+});
+
+const HelpMessage = styled('span', {
+  variants: {
+    valid: {
+      true: {
+        color: '$success200',
+      },
+    },
+    invalid: {
+      true: {
+        color: '$danger200',
+      },
+    },
   },
 });
 
 export const Input: FC<IInputProps> = ({
   size = 'medium',
-  readonly = false,
+  helpMessage,
+  valid,
+  invalid,
   ...props
 }) => {
-  return <StyledInput size={size} readonly={readonly} {...props} />;
+  console.log(valid);
+  return (
+    <>
+      <StyledInput size={size} valid={valid} invalid={invalid} {...props} />
+      {helpMessage && (
+        <HelpMessage valid={valid} invalid={invalid}>
+          {helpMessage}
+        </HelpMessage>
+      )}
+    </>
+  );
 };
