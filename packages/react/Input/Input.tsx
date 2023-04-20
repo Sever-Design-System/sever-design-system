@@ -23,6 +23,13 @@ const StyledInput = styled('input', {
   '&::placeholder': {
     color: '$neutral400',
   },
+  '&:hover': {
+    border: '1px solid $neutral300',
+  },
+  '&:focus': {
+    outline: '1px solid $primary200',
+    boxShadow: '0px 0px 0px 4px rgba(192, 206, 255, 0.6)',
+  },
 
   variants: {
     size: {
