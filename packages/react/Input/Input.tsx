@@ -14,10 +14,10 @@ export interface IInputProps {
 }
 
 const StyledInput = styled('input', {
+  boxSizing: 'border-box',
+
   borderRadius: '$s',
   border: '1px solid $neutral200',
-  padding: '$xs4 $xs2',
-  height: '$xl2',
   color: '$neutral500',
 
   '&::placeholder': {
@@ -26,20 +26,37 @@ const StyledInput = styled('input', {
 
   variants: {
     size: {
-      small: {},
-      medium: {},
+      small: {
+        padding: '$xs4 $xs2',
+        height: '$xl',
+      },
+      medium: {
+        padding: '$s $xs2',
+        height: '$xl2',
+      },
     },
     disabled: {
-      true: {},
-      false: {},
+      true: {
+        border: 'none',
+        backgroundColor: '$neutral100',
+        color: '$neutral300',
+        pointerEvents: 'none',
+      },
     },
     readonly: {
-      true: {},
-      false: {},
+      true: {
+        border: 'none',
+        backgroundColor: '$neutral100',
+        color: '$neutral400',
+      },
     },
   },
 });
 
-export const Input: FC<IInputProps> = () => {
-  return <StyledInput placeholder="Super Input" />;
+export const Input: FC<IInputProps> = ({
+  size = 'medium',
+  readonly = false,
+  ...props
+}) => {
+  return <StyledInput size={size} readonly={readonly} {...props} />;
 };

@@ -9,5 +9,15 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Medium = Template.bind({});
+Medium.args = {};
+export const Disabled = Template.bind({});
+Disabled.args = {
+  value: 'Disabled Input',
+  disabled: true,
+};
+export const ReadOnly = Template.bind({});
+ReadOnly.args = {
+  value: 'Readonly Input',
+  readonly: true,
+};
