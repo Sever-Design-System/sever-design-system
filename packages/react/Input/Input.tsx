@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { styled } from '../stitches.config';
+import { Box } from '../Box';
 
 export interface IInputProps {
   size?: 'small' | 'medium';
@@ -61,11 +62,21 @@ const StyledInput = styled('input', {
     valid: {
       true: {
         borderColor: '$success200',
+
+        '&:focus': {
+          outline: '1px solid $success200',
+          boxShadow: '0px 0px 0px 4px rgba(192, 206, 255, 0.6)',
+        },
       },
     },
     invalid: {
       true: {
         borderColor: '$danger200',
+
+        '&:focus': {
+          outline: '1px solid $danger200',
+          boxShadow: '0px 0px 0px 4px rgba(192, 206, 255, 0.6)',
+        },
       },
     },
   },
@@ -95,13 +106,15 @@ export const Input: FC<IInputProps> = ({
 }) => {
   console.log(valid);
   return (
-    <>
+    <Box display="flex" justifyContent="center" flexDirection="column">
       <StyledInput size={size} valid={valid} invalid={invalid} {...props} />
-      {helpMessage && (
-        <HelpMessage valid={valid} invalid={invalid}>
-          {helpMessage}
-        </HelpMessage>
-      )}
-    </>
+      <Box display="flex" alignItems="flex-end" height={'24px'}>
+        {helpMessage && (
+          <HelpMessage valid={valid} invalid={invalid}>
+            {helpMessage}
+          </HelpMessage>
+        )}
+      </Box>
+    </Box>
   );
 };

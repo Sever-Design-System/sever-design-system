@@ -25,11 +25,11 @@ export const Valid = Template.bind({});
 Valid.args = {
   value: 'Valid Input',
   valid: true,
-  helpMessage: 'Not bad',
+  helpMessage: 'Validation text',
 };
 export const Invalid = Template.bind({});
 Invalid.args = {
   value: 'Invalid Input',
   invalid: true,
-  helpMessage: 'Not bad',
+  helpMessage: 'Validation text',
 };
