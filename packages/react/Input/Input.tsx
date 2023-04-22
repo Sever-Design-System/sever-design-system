@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ChangeEvent, FC } from 'react';
 import { styled } from '../stitches.config';
 import { Box } from '../Box';
 
@@ -13,6 +13,7 @@ export interface IInputProps {
   helpMessage?: string;
   label?: string;
   ghost?: boolean;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const StyledInput = styled('input', {
@@ -104,11 +105,10 @@ export const Input: FC<IInputProps> = ({
   invalid,
   ...props
 }) => {
-  console.log(valid);
   return (
     <Box display="flex" justifyContent="center" flexDirection="column">
       <StyledInput size={size} valid={valid} invalid={invalid} {...props} />
-      <Box display="flex" alignItems="flex-end" height={'24px'}>
+      <Box display="flex" alignItems="flex-end" height="24px">
         {helpMessage && (
           <HelpMessage valid={valid} invalid={invalid}>
             {helpMessage}
