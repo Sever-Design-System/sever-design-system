@@ -17,15 +17,15 @@ type flexWrap = 'nowrap' | 'wrap' | 'wrap-reverse';
 type BackgroundColor = Stitches.PropertyValue<'backgroundColor'>;
 
 export interface IBoxProps extends HTMLProps<HTMLDivElement> {
-  display: display;
-  backgroundColor: BackgroundColor;
-  width: string | number | undefined;
-  height: string | number | undefined;
-  justifyContent: justifyContent;
-  alignItems: alignItems;
-  flexDirection: flexDirection;
-  flexWrap: flexWrap;
-  children: ReactNode | Array<ReactNode> | string | null;
+  display?: display;
+  backgroundColor?: BackgroundColor;
+  width?: string | number | undefined;
+  height?: string | number | undefined;
+  justifyContent?: justifyContent;
+  alignItems?: alignItems;
+  flexDirection?: flexDirection;
+  flexWrap?: flexWrap;
+  children?: ReactNode | Array<ReactNode> | string | null;
 }
 
 const Div = css('div', {});
